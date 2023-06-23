@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="PSD_LEC.Views.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="~/Styles/bootstrap.min.css" rel="stylesheet"/>
+    <script src="~/Styles/bootstrap.bundle.min.js" ></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-light bg-light">
+            <ul style="display: flex; flex-direction: row; list-style-type: none;">
+                <li runat="server" id="view_books_li" style="padding: 10px;"><a href="/Views/Books/ViewBooks.aspx" style="text-decoration: none; color: blue;">Order Book</a></li>
+                <li runat="server" id="history_li" style="padding: 10px;"><a href="/Views/Transactions/TransactionHistory.aspx" style="text-decoration: none; color: blue;">History</a></li>
+                <li runat="server" id="order_queue_li" style="padding: 10px;"><a href="/Views/Transactions/OrderQueue.aspx" style="text-decoration: none; color: blue;">Order Queue</a></li>
+                <li runat="server" id="insert_book_li" style="padding: 10px;"><a href="/Views/Books/InsertBook.aspx" style="text-decoration: none; color: blue;">Insert Book</a></li>
+                <li runat="server" id="manage_book_li" style="padding: 10px;"><a href="/Views/Books/ViewBooks.aspx" style="text-decoration: none; color: blue;">Manage Book</a></li>
+                <li runat="server" id="cart_li" style="padding: 10px;"><a href="/Views/Carts/ViewCart.aspx" style="text-decoration: none; color: blue;">Cart</a></li>
+                <li runat="server" id="register_li" style="padding: 10px;"><a href="/Views/Users/Register.aspx" style="text-decoration: none; color: blue;">Register</a></li>
+                <li runat="server" id="login_li" style="padding: 10px;"><a href="/Views/Users/Login.aspx" style="text-decoration: none; color: blue;">Login</a></li>
+                <li><asp:Button ID="logout_Button" runat="server" Text="logout" OnClick="logout_Button_Click" /></li>
+            </ul>
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
